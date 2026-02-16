@@ -1101,6 +1101,19 @@
     // (Leave as-is unless you see a layout glitch.)
   }
 })();
+</script><script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var q = params.get("q");
+  if (!q) return;
+
+  var input = document.getElementById("searchInput");
+  if (!input) return;
+
+  input.value = q;
+  input.dispatchEvent(new Event("input", { bubbles: true }));
+})();
 </script>
+
 </body>
 </html>
